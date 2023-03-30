@@ -3,6 +3,8 @@ using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
 using Business.Concrete;
 using Castle.DynamicProxy;
+using Core.Async.RabbitMQ.Publisher;
+using Core.Async.RabbitMQ.Publisher.Abstract;
 using Core.Utilities.FileHelper;
 using Core.Utilities.Interceptors;
 using Core.Utilities.Security.JWT;
@@ -32,6 +34,7 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EfRentalDal>().As<IRentalDal>().SingleInstance();
             builder.RegisterType<PaymentManager>().As<IPaymentService>().SingleInstance();
             builder.RegisterType<EfPaymentDal>().As<IPaymentDal>().SingleInstance();
+            builder.RegisterType<MailPublisher>().As<IMailPublisher>().SingleInstance();
 
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();

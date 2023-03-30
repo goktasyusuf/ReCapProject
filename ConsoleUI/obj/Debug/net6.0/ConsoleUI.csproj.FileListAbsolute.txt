@@ -98,3 +98,10 @@ C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft.Extensions.ObjectPool.dll
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft.Net.Http.Headers.dll
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\MassTransit.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\MassTransit.Abstractions.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\RabbitMQ.Client.dll

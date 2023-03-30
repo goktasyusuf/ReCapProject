@@ -65,6 +65,17 @@ namespace Business.Concrete
             return new SuccessDataResult<User>(user, "Başarıyla Kayıt Olundu");
         }
 
+        public IDataResult<User> UpdatePassword(UserForPasswordDto user)
+        {
+            byte[] passwordHash, passwordSalt;
+            HashingHelper.CreatePasswordHash(user.Password, out passwordHash, out passwordSalt);
+            var userUpdate = _userService.GetByMail(user.Email);
+            userUpdate.PasswordHash = passwordHash;
+            userUpdate.PasswordSalt = passwordSalt;
+            _userService.Update(userUpdate);
+            return new SuccessDataResult<User>(userUpdate, "Sifre Başarıyla Güncellendi");
+        }
+
         public IResult UserExists(string email)
         {
             var exist = _userService.GetByMail(email);

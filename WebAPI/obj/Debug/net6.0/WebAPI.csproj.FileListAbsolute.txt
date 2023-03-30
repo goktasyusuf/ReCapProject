@@ -109,3 +109,9 @@ C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\WebAPI.stati
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\MassTransit.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\MassTransit.Abstractions.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\WebAPI\bin\Debug\net6.0\RabbitMQ.Client.dll

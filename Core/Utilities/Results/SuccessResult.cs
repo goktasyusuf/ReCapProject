@@ -12,7 +12,6 @@ namespace Core.Utilities.Results
         {
 
         }
-
         public SuccessResult(string message):base(message,true)
         {
 

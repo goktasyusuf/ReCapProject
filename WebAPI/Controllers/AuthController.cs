@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Core.Async.Message;
+using Core.Async.RabbitMQ.Publisher.Abstract;
 using Entities.Concrete.Dto_s;
-using Microsoft.AspNetCore.Http;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -9,11 +11,15 @@ namespace WebAPI.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        IAuthService authService;
+        private readonly IAuthService authService;
+        private readonly IMailPublisher mailPublisher;
+        ISendEndpointProvider send;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, IMailPublisher mailPublisher, ISendEndpointProvider send)
         {
             this.authService = authService;
+            this.mailPublisher = mailPublisher;
+            this.send = send;
         }
 
         [HttpPost("login")]
@@ -49,7 +55,29 @@ namespace WebAPI.Controllers
             {
                 return BadRequest(check.Message);
             }
+            mailPublisher.Publish(userForRegisterDto.Email);
             return Ok(check);
+        }
+
+        [HttpPost("resetpassword")]
+        public ActionResult ResetPassword(UserForPasswordDto dto)
+        {
+            var userExists = authService.UserExists(dto.Email);
+            if(userExists.Success)
+            {
+                return BadRequest("Bu maile ait bir kullanıcı bulunmamaktadır");
+            }
+            var user  = authService.UpdatePassword(dto);
+            return Ok(user);
+        }
+
+        [HttpGet("deneme")]
+        public async Task<ActionResult> Deneme()
+        {
+            IMessage message = new ExampleMessage { Mail = "selam" };
+            var point = await send.GetSendEndpoint(new Uri("queue:ornekkuyruk"));
+            await point.Send(message);
+            return Ok("mesaj yollandı");
         }
     }
 }

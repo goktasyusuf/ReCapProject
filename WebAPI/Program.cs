@@ -1,11 +1,13 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Business.DependencyResolvers.Autofac;
+using Core.Async.Masstransit.Services;
 using Core.DependencyResolvers;
 using Core.Extensions;
 using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
@@ -23,9 +25,6 @@ namespace WebAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
-           
-            
 
 
             var tokenOptions = builder.Configuration.GetSection("TokenOptions").Get<TokenOptions>();
@@ -46,10 +45,28 @@ namespace WebAPI
 
             builder.Services.AddDependecyResolvers(new ICoreModule[] { new CoreModule() });
 
-
             builder.Services.AddCors();
 
 
+            //----------------------------------------------------------------------------------------
+
+            builder.Services.AddMassTransit(configurator =>
+            {
+               
+                configurator.UsingRabbitMq((context, _configurator) =>
+                {
+                    _configurator.Host("amqps://leegtftr:ti1josMXiN6oVf6nYHCvHSzvC0eeJBiU@rat.rmq2.cloudamqp.com/leegtftr");
+                });
+                builder.Services.AddHostedService<ExampleService>(provider =>
+                {
+                    using IServiceScope scope = provider.CreateScope();
+                    var endPoint = scope.ServiceProvider.GetService<IPublishEndpoint>();
+                    return new(endPoint);
+                });
+            });
+            
+            
+            //----------------------------------------------------------------------------------------
 
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
             .ConfigureContainer<ContainerBuilder>(builder =>
@@ -78,7 +95,6 @@ namespace WebAPI
             app.UseAuthentication();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

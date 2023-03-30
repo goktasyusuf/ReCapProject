@@ -1,4 +1,8 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\WebAPI"
+  ],
+  "SelectedNode": "\\WebAPI\\WebAPI.csproj",
   "PreviewInSolutionExplorer": false
 }

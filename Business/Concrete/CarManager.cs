@@ -3,6 +3,7 @@ using Business.BusinessAspects.Autofac;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.Business.BusinessRules;
 using Core.Utilities.Results;
@@ -23,7 +24,7 @@ namespace Business.Concrete
 
         [ValidationAspect(typeof(CarValidator),Priority = 2)]
         [SecuredOperation("admin,product.add",Priority = 1)]
-        //[TransactionScopeAspect]
+        [TransactionScopeAspect]
         public IResult Add(Car entity)
         {
             var result = BusinessRules.Run(CheckIfCarNamesSame(entity.Description), CheckIfColorCountIsTrue(entity.ColorId));
