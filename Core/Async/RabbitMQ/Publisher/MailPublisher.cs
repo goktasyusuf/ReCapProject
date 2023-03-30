@@ -11,7 +11,7 @@ namespace Core.Async.RabbitMQ.Publisher
         {
             ConnectionFactory factory = new()
             {
-                Uri = new("amqps://leegtftr:ti1josMXiN6oVf6nYHCvHSzvC0eeJBiU@rat.rmq2.cloudamqp.com/leegtftr")
+                Uri = new("X")
             };
             using IConnection connection = factory.CreateConnection();
             using IModel channel = connection.CreateModel();

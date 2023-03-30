@@ -55,7 +55,7 @@ namespace WebAPI
                
                 configurator.UsingRabbitMq((context, _configurator) =>
                 {
-                    _configurator.Host("amqps://leegtftr:ti1josMXiN6oVf6nYHCvHSzvC0eeJBiU@rat.rmq2.cloudamqp.com/leegtftr");
+                    _configurator.Host("X");
                 });
                 builder.Services.AddHostedService<ExampleService>(provider =>
                 {
