@@ -27,6 +27,7 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
 
         public object Get(string key)
         {
+            var x = _memoryCache.Get(key);
             return _memoryCache.Get(key);
         }
 

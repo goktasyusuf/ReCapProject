@@ -27,6 +27,7 @@ namespace Core.Aspects.Autofac.Caching
             if (_cacheManager.IsAdd(key))
             {
                 invocation.ReturnValue = _cacheManager.Get(key);
+                var x = invocation.ReturnValue;
                 return;
             }
             invocation.Proceed();
