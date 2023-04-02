@@ -107,5 +107,6 @@ namespace Business.Concrete
             _carDal.Add(car);
             return new SuccessDataResult<int>(car.Id, "Araba Eklendi ve id'si geri döndü");
         }
+
     }
 }

@@ -1,7 +1,5 @@
-﻿using Autofac.Core;
-using Castle.DynamicProxy;
+﻿using Castle.DynamicProxy;
 using Core.CrossCuttingConcerns.Caching;
-using Core.CrossCuttingConcerns.Caching.Microsoft;
 using Core.Utilities.Interceptors;
 using Core.Utilities.IoC;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,8 +24,9 @@ namespace Core.Aspects.Autofac.Caching
             var key = $"{methodName}({string.Join(",", arguments.Select(x => x?.ToString() ?? "<Null>"))})";
             if (_cacheManager.IsAdd(key))
             {
+                //ICustomAttributeProvider returnType = invocation.Method.ReturnTypeCustomAttributes;
+                //invocation.ReturnValue = _cacheManager.Get<returnType>(key);
                 invocation.ReturnValue = _cacheManager.Get(key);
-                var x = invocation.ReturnValue;
                 return;
             }
             invocation.Proceed();

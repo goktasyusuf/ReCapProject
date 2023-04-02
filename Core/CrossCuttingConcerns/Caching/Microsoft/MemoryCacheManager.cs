@@ -17,6 +17,7 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
         }
         public void Add(string key, object value, int duration)
         {
+            var x = _memoryCache.Set(key, value, TimeSpan.FromMinutes(duration));
             _memoryCache.Set(key, value, TimeSpan.FromMinutes(duration));
         }
 

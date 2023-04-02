@@ -1,54 +1,50 @@
-﻿using Core.Utilities.IoC;
-using Core.Utilities.Results;
-using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Core.CrossCuttingConcerns.Caching.Redis.RedisServer;
 using Newtonsoft.Json;
-using System.Text;
+using Newtonsoft.Json.Linq;
+using StackExchange.Redis;
 
 namespace Core.CrossCuttingConcerns.Caching.Redis
 {
     public class RedisCacheManager : ICacheManager
     {
+        private RedisServerConnection serverConnection;
 
-        IDistributedCache _distributedCache;
-
-        public RedisCacheManager()
+        public RedisCacheManager(RedisServerConnection serverConnection)
         {
-            _distributedCache = ServiceTool.ServiceProvider.GetService<IDistributedCache>();
+            this.serverConnection = serverConnection;
         }
 
         public void Add(string key, object value, int duration)
         {
-            var x = JsonConvert.SerializeObject(value);
-            _distributedCache.SetString(key,x, new DistributedCacheEntryOptions()
-            {
-                AbsoluteExpiration = DateTime.Now.AddMinutes(duration)
-            });
+            string jsonData = JsonConvert.SerializeObject(value);
+            serverConnection.Database.StringSet(key,jsonData);
         }
 
         public T Get<T>(string key)
         {
-            throw new NotImplementedException();
+            if(IsAdd(key))
+            {
+                string jsonData = serverConnection.Database.StringGet(key);
+                return JsonConvert.DeserializeObject<T>(jsonData);
+            }
+            return default;
         }
 
         public object Get(string key)
         {
-            var x = _distributedCache.GetString(key);
-            return _distributedCache.GetString(key);
+            var data = serverConnection.Database.StringGet(key);
+            return JsonConvert.DeserializeObject(data);
+            
         }
 
         public bool IsAdd(string key)
         {
-            if(_distributedCache.GetString(key)==null)
-            {
-                return false;
-            }
-            return true;
+            return serverConnection.Database.KeyExists(key);
         }
 
         public void Remove(string key)
         {
-            _distributedCache.Remove(key);
+            serverConnection.Database.KeyDelete(key);
         }
 
         public void RemoveByPattern(string pattern)

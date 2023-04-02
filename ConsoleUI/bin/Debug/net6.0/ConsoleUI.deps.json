@@ -812,6 +812,17 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.2": {
+        "dependencies": {
+          "System.IO.Pipelines": "5.0.2"
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.2.34088"
+          }
+        }
+      },
       "RabbitMQ.Client/6.4.0": {
         "dependencies": {
           "System.Memory": "4.5.4",
@@ -872,6 +883,29 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "StackExchange.Redis/2.6.90": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.2"
+        },
+        "runtime": {
+          "lib/net5.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.6.90.64945"
+          }
+        }
+      },
+      "StackExchange.Redis.Extensions.Core/9.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "StackExchange.Redis": "2.6.90"
+        },
+        "runtime": {
+          "lib/net6.0/StackExchange.Redis.Extensions.Core.dll": {
+            "assemblyVersion": "9.1.0.0",
+            "fileVersion": "9.1.0.0"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1710,6 +1744,7 @@
           "Microsoft.Extensions.Configuration.Binder": "7.0.3",
           "Microsoft.IdentityModel.Tokens": "6.21.0",
           "Newtonsoft.Json": "13.0.3",
+          "StackExchange.Redis.Extensions.Core": "9.1.0",
           "System.IdentityModel.Tokens.Jwt": "6.21.0"
         },
         "runtime": {
@@ -2200,6 +2235,13 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
+    "Pipelines.Sockets.Unofficial/2.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bhk0FWxH1paI+18zr1g5cTL+ebeuDcBCR+rRFO+fKEhretgjs7MF2Mc1P64FGLecWp4zKCUOPzngBNrqVyY7Zg==",
+      "path": "pipelines.sockets.unofficial/2.2.2",
+      "hashPath": "pipelines.sockets.unofficial.2.2.2.nupkg.sha512"
+    },
     "RabbitMQ.Client/6.4.0": {
       "type": "package",
       "serviceable": true,
@@ -2318,6 +2360,20 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.6.90": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OVmlUSvuCI4rMcSU1dI1h+U/6t2k8AL7TVD1kIrZ0eSDDrgNlKcsTlQhZU8u9ViU6F8AVOvFZnxDP69NyU/oUQ==",
+      "path": "stackexchange.redis/2.6.90",
+      "hashPath": "stackexchange.redis.2.6.90.nupkg.sha512"
+    },
+    "StackExchange.Redis.Extensions.Core/9.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oj9Y3YfIa9bBGMcQIEvucPpwlqrZzPquDbZZQbJif7Bt7mTBkjovJ8fMd6DRbqDFaXWSA63T1Iei+z78gvERyg==",
+      "path": "stackexchange.redis.extensions.core/9.1.0",
+      "hashPath": "stackexchange.redis.extensions.core.9.1.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

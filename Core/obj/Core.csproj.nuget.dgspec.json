@@ -76,10 +76,6 @@
               "target": "Package",
               "version": "[7.0.3, )"
             },
-            "Microsoft.Extensions.Caching.StackExchangeRedis": {
-              "target": "Package",
-              "version": "[7.0.4, )"
-            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )"

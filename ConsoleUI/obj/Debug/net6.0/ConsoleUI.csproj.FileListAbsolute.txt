@@ -105,3 +105,6 @@ C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\StackExchange.Redis.dll
+C:\Users\yusuf\OneDrive\Masaüstü\C#\Recap\ConsoleUI\bin\Debug\net6.0\StackExchange.Redis.Extensions.Core.dll

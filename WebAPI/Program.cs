@@ -1,12 +1,16 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Business.DependencyResolvers;
 using Business.DependencyResolvers.Autofac;
 using Core.Async.Masstransit.Services;
 using Core.DependencyResolvers;
+using Core.DependencyResolvers.Autofac;
 using Core.Extensions;
 using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
+using DataAccess.DependencyResolvers;
+using DataAccess.DependencyResolvers.Autofac;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -43,16 +47,20 @@ namespace WebAPI
                     };
                 });
 
-            builder.Services.AddDependecyResolvers(new ICoreModule[] { new CoreModule() });
+            builder.Services.AddDependecyResolvers(new IDependencyInjectionModule[]
+            {
+                new CoreModule(),
+                new BusinessModule(),
+                new DataAccessModule()
+
+            });
 
             builder.Services.AddCors();
 
 
-            //----------------------------------------------------------------------------------------
-
             builder.Services.AddMassTransit(configurator =>
             {
-               
+
                 configurator.UsingRabbitMq((context, _configurator) =>
                 {
                     _configurator.Host("X");
@@ -64,14 +72,15 @@ namespace WebAPI
                     return new(endPoint);
                 });
             });
-            
-            
-            //----------------------------------------------------------------------------------------
+
+
 
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
             .ConfigureContainer<ContainerBuilder>(builder =>
             {
-            builder.RegisterModule(new AutofacBusinessModule());
+                builder.RegisterModule(new AutofacBusinessModule());
+                builder.RegisterModule(new AutofacCoreModule());
+                builder.RegisterModule(new AutofacDataAccessModule());
             });
 
 
@@ -88,7 +97,7 @@ namespace WebAPI
 
             app.UseStaticFiles();
 
-            app.UseCors(builder =>builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
 
             app.UseHttpsRedirection();
 

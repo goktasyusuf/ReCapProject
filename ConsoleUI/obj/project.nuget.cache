@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KutNmqhwoh7SYGv/De/7sX9lYNbCa7L02N+NGuYLyVK45JvEwnxULqJIJdAkrNXM3SyG2r5sRoCLbhPcyR5qjQ==",
+  "dgSpecHash": "6UcdI2H+LCvNZ/ppp84I2Q5zMOy2HaElFG/TLgZg3+JFPWMLM+q9ps7dbAgIGm8HOGooX5EqoKbQ4FADSeo3mw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\ConsoleUI\\ConsoleUI.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,6 @@
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.3\\microsoft.entityframeworkcore.sqlserver.7.0.3.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
-    "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\7.0.4\\microsoft.extensions.caching.stackexchangeredis.7.0.4.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.3\\microsoft.extensions.configuration.binder.7.0.3.nupkg.sha512",
@@ -50,7 +49,7 @@
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.objectpool\\2.2.0\\microsoft.extensions.objectpool.2.2.0.nupkg.sha512",
-    "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.identity.client\\4.45.0\\microsoft.identity.client.4.45.0.nupkg.sha512",
     "C:\\Users\\yusuf\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.19.3\\microsoft.identity.client.extensions.msal.2.19.3.nupkg.sha512",
