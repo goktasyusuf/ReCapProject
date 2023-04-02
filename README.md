@@ -4,6 +4,10 @@ It is the backend project provides car rental service. This project strictly imp
 
 # Technologies and techniques used in the project.
 
+- Redis
+
+- RabbitMQ
+
 - N-Tier Architecture
 
 - Layered Architecture (Core, Entity, DataAccess, Business, API Layers)
@@ -25,6 +29,7 @@ It is the backend project provides car rental service. This project strictly imp
 - Generic Repository Pattern / Unit of Work Pattern / Adapter Pattern
 
 - Authorization System
+
 
 
 # Installing
