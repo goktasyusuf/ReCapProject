@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CZ5OEigxM7cz1SoNaiYh6Fg+cy5kT7IdMCaP1mdM4gU=",
+  "Hash": "ZsLAB5HfDa9q9nRMazCCG6GjD+i8aiGpQzmzz8mcGxY=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\Images\\00acef71-7684-400c-8128-50d7a115e487.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\13fd8d20-ce62-41b8-bb89-14123f9eb87b.png",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "Uploads/Images/13fd8d20-ce62-41b8-bb89-14123f9eb87b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Images\\13fd8d20-ce62-41b8-bb89-14123f9eb87b.png"
     },
     {
       "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\20c31e4b-48b4-483e-af10-7dfebdd69bac.jpg",
@@ -68,6 +85,40 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Images\\2c0f7888-2d02-4477-813f-72ba606d26cd.jpg"
     },
     {
+      "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\5ddd9b34-3ed8-4a27-a774-0b53f1ce4c28.png",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "Uploads/Images/5ddd9b34-3ed8-4a27-a774-0b53f1ce4c28.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Images\\5ddd9b34-3ed8-4a27-a774-0b53f1ce4c28.png"
+    },
+    {
+      "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\64ea34e1-9695-46b1-acf6-518a810a42b7.png",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "Uploads/Images/64ea34e1-9695-46b1-acf6-518a810a42b7.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Images\\64ea34e1-9695-46b1-acf6-518a810a42b7.png"
+    },
+    {
       "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\7c6525e9-9cbc-40f4-b911-a95873124266.jpg",
       "SourceId": "WebAPI",
       "SourceType": "Discovered",
@@ -100,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\Images\\814801b2-e425-46b2-adb1-310381afb1aa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\91fd27fa-5dbc-48b3-8878-99d1056e7ae6.png",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "Uploads/Images/91fd27fa-5dbc-48b3-8878-99d1056e7ae6.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Images\\91fd27fa-5dbc-48b3-8878-99d1056e7ae6.png"
     },
     {
       "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\9e713909-c6f5-4a7e-a60e-bef47f7d5e8a.jpg",
@@ -168,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\Images\\b40bf281-76cc-4707-8f0a-e43efc934218.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\bc81f6dd-9452-433f-96f0-d30a8b1f2f0e.png",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "Uploads/Images/bc81f6dd-9452-433f-96f0-d30a8b1f2f0e.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Images\\bc81f6dd-9452-433f-96f0-d30a8b1f2f0e.png"
     },
     {
       "Identity": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\C#\\Recap\\WebAPI\\wwwroot\\Uploads\\Images\\c3f72013-f55b-48c1-a711-2a45c45c6912.png",

@@ -1,29 +1,30 @@
 ﻿using Business.Abstract;
 using Business.BusinessAspects.Autofac;
 using Business.ValidationRules.FluentValidation;
-using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Performance;
 using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.Business.BusinessRules;
+using Core.Utilities.IoC;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.Concrete.Dto_s;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Business.Concrete
 {
     public class CarManager : ICarService
     {
         readonly ICarDal _carDal;
-
         public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
+           
         }
 
-        [ValidationAspect(typeof(CarValidator),Priority = 2)]
-        [SecuredOperation("admin,product.add",Priority = 1)]
+        [ValidationAspect(typeof(CarValidator), Priority = 2)]
+        [SecuredOperation("admin,product.add", Priority = 1)]
         [TransactionScopeAspect]
         public IResult Add(Car entity)
         {
@@ -43,17 +44,17 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        [CacheAspect]
+        [CarCaching]
         [PerformanceAspect(1)]
         public IDataResult<List<Car>> GetAll()
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(),"Veriler Başarıyla Getirildi.");
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(), "Veriler Başarıyla Getirildi.");
         }
 
-        [CacheAspect]
+    
         public IDataResult<Car> GetById(int id)
         {
-            return new SuccessDataResult<Car>(_carDal.Get(x=>x.Id == id));  
+            return new SuccessDataResult<Car>(_carDal.Get(x => x.Id == id));
         }
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
@@ -99,7 +100,7 @@ namespace Business.Concrete
 
         public IDataResult<List<CarDetailDto>> GetCarsByBrandAndColorId(int brandId, int colorId)
         {
-            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarsByBrandAndColor(brandId, colorId),"İlgili Arabalar Getirildi");
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarsByBrandAndColor(brandId, colorId), "İlgili Arabalar Getirildi");
         }
 
         public IDataResult<int> AddCarAndReturnCarId(Car car)

@@ -1,50 +1,46 @@
 ﻿using Core.CrossCuttingConcerns.Caching.Redis.RedisServer;
+using Core.Entities.Abstract;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using StackExchange.Redis;
 
 namespace Core.CrossCuttingConcerns.Caching.Redis
 {
-    public class RedisCacheManager : ICacheManager
+    public class RedisCacheManager<RedisContext, ServerConnection, TEntity> : ICacheManager<TEntity>
+        where TEntity : class, IEntity, new()
+        where RedisContext : class, IRedisKey, new()
+        where ServerConnection : class, IRedisServerConnection, new()
     {
-        private RedisServerConnection serverConnection;
-
-        public RedisCacheManager(RedisServerConnection serverConnection)
+        private IRedisServerConnection serverConnection;
+        RedisContext redisContext;
+        public RedisCacheManager()
         {
-            this.serverConnection = serverConnection;
+            redisContext = new RedisContext();
+            this.serverConnection = new ServerConnection();
         }
 
-        public void Add(string key, object value, int duration)
+        public void Add(object value, int duration)
         {
             string jsonData = JsonConvert.SerializeObject(value);
-            serverConnection.Database.StringSet(key,jsonData);
+            serverConnection.Database.StringSet(redisContext.KeyName, jsonData);
         }
 
-        public T Get<T>(string key)
+        public TEntity Get()
         {
-            if(IsAdd(key))
+            if (IsAdd())
             {
-                string jsonData = serverConnection.Database.StringGet(key);
-                return JsonConvert.DeserializeObject<T>(jsonData);
+                string jsonData = serverConnection.Database.StringGet(redisContext.KeyName);
+                var a = JsonConvert.DeserializeObject<TEntity>(jsonData);
+                return a;
             }
             return default;
         }
-
-        public object Get(string key)
+        public bool IsAdd()
         {
-            var data = serverConnection.Database.StringGet(key);
-            return JsonConvert.DeserializeObject(data);
-            
+            return serverConnection.Database.KeyExists(redisContext.KeyName);
         }
 
-        public bool IsAdd(string key)
+        public void Remove()
         {
-            return serverConnection.Database.KeyExists(key);
-        }
-
-        public void Remove(string key)
-        {
-            serverConnection.Database.KeyDelete(key);
+            serverConnection.Database.KeyDelete(redisContext.KeyName);
         }
 
         public void RemoveByPattern(string pattern)
